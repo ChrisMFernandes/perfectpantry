@@ -1,0 +1,23 @@
+<div class="header">
+	<img id="homeheader" src="/images/viewheader.jpg">
+</div>
+<div class="container">
+	<div class="text-center">
+		<h1>Featured Recipes</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card" style="display: inline-block;">
+				<% @recipes.each do |t| %>
+			  	<img class="card-img-top" <%= t.image_url %> >
+				<div class="card-body">
+			    	<h4 class="card-title">
+			    		<%= t.name %>
+			    	</h4>
+			    	<div class="btn btn-primary">
+			    		<%= link_to 'View Recipe', recipes_path, :class => "btn"%>
+			    	</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
