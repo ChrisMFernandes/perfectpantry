@@ -1,0 +1,1 @@
+$('body').html("<h1><%= escape_javaScript(@recipes.name) %></h1>").append("<%= escape_javaScript(@recipes.directions) %>").append("<%= escape_javaScript(@recipes.difficulty) %>").append("<%= escape_javaScript(@recipes.image_url) %>");

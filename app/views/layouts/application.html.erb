@@ -6,19 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   </head>
 
   <body>
   	<div class="container">
 	  	<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #171A2F;">
-	  		<a class="navbar-brand" href="#">
-	  			<img style="max-width:100px; margin-top: -7px;"
-             		src="/images/logo.png">
+	  		<a class="navbar-brand" href="/">
+	  			<img src="/images/logo.png" style="width:150px; margin-top: -50px; margin-left: -30px;">
         	</a>
 	  			<p class="navbar-text pull-right">
 					<% if user_signed_in? %>
 			  			Logged in as <strong><%= current_user.email %></strong>.
-			  			<%= link_to "Home", root_path %>
 			  			<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
 			  			<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 					<% else %>
@@ -26,6 +26,20 @@
 			  			<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 					<% end %>
 				</p>
+
+        <%= form_tag(search_recipes_path, method: :post, class: "form-inline", role: "search") do %>
+            <div class="input-group" style="padding-top: .5%;">
+                    <%= text_field_tag :term, params[:term], placeholder: "Search", class: "form-control" %>
+                <div class="input-group-btn search-panel" style="padding-left: 1%;">
+                    <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+                </div>
+            </div>
+
+
+        </nav>
+
+			
+            <% end %>
 
 	  	<% if notice %>
 	  		<p class="alert alert-success"><%= notice %></p>
@@ -36,5 +50,61 @@
 		<% end %>
 	</div>
     <%= yield %>
+    <footer class="page-footer" style="background-color: #171A2F;">
+
+    <div id="footer" class="container">
+        <div class="row my-4">
+
+            <div class="col-md-4 col-lg-4">
+                <h5 class="title mb-4 font-bold">Perfect Pantry</h5>
+                <p>Here you can use rows and columns here to organize your footer content.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident
+                    voluptate esse quasi, veritatis totam voluptas nostrum. </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 ml-auto">
+                <h5 class="title mb-4 font-bold">About</h5>
+                <ul>
+                    <p><a href="/recipes">Recipes</a></p>
+                    <p><a href="#!">About Us</a></p>
+                    <p><a href="#!">Blog</a></p>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+                <h5 class="title mb-4 font-bold">Address</h5>
+
+                <p><i class="fa fa-home mr-3"></i> New York, NY 10038, US</p>
+                <p><i class="fa fa-envelope mr-3"></i> info@perfectpantry.com</p>
+                <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 text-center">
+                <h5 class="title mb-4 font-bold">Follow Us</h5>
+
+                <div class="social-section mt-2 ">
+
+                    <i class="fa fa-facebook" style="font-size:36px; color:#A79990"></i>
+
+                    <i class="fa fa-twitter" style="font-size:36px; color:#A79990"></i>
+
+                    <i class="fa fa-google-plus" style="font-size:36px; color:#A79990"></i>
+                    
+                    <i class="fa fa-dribbble" style="font-size:36px; color:#A79990"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="https://www.perfectpantry.com"> PerfectPantry.com </a>
+
+        </div>
+    </div>
+
+</footer>
   </body>
 </html>
