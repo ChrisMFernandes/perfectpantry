@@ -1,0 +1,28 @@
+<div class="header">
+	<img id="homeheader" src="/images/viewheader.jpg">
+</div>
+<div class="container" style="background-color: #f7f7f7;">
+	<div class="text-center">
+		<h1>Look what we found!</h1>
+	</div>
+
+<div class="card-columns">
+	<div class="card-deck-wrapper">
+		<div class="card-deck">
+			<% @recipes.each do |t| %>
+		  <div class="card" style="background-color: #f7f7f7; border: 0;">
+		    <img class="card-img-top" style="height: 300px; width: 412px;" alt="Card image cap" src="<%= t.image_url %>">
+		    <div class="card-body">
+		      <h5 class="card-title"><%= t.name %></h5>
+		      <p class="card-text"><%= t.name %></p>
+		      <%= link_to "View Recipe", recipe_path(t), method: :get%>
+		      <%= link_to "Delete Recipe", recipe_path(t), method: :delete, data: {confirm: "Are you sure?"} %>
+		    </div>
+		  </div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+</div>
+

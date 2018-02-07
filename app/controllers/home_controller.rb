@@ -3,4 +3,13 @@ class HomeController < ApplicationController
 		@recipes = Recipe.all
 		@ingredients = Ingredient.all
 	end
+
+	def knives
+	end
+
+	def spices
+	end
+
+	def steak
+	end
 end

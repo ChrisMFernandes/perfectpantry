@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'cocoon'
+
 gem 'searchkick'
 # Install Devise for user authentication
 gem 'devise'
