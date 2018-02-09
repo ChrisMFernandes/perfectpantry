@@ -1,7 +1,14 @@
 class Ingredient < ApplicationRecord
-	searchkick
+	searchkick word_middle: [:name]
 
+	def search_data
+		{
+			name: name
+		}
+	end
+
+
+	belongs_to :recipes, optional: true
 	has_many :recipe_ingredients
 	has_many :recipes, through: :recipe_ingredients
-	accepts_nested_attributes_for :recipe_ingredients, allow_destroy: true
 end

@@ -1,28 +1,38 @@
 <div class="header">
 	<div class="text-center">
-		<img id="showheader" src="http://healthoholics.com/wp-content/uploads/2015/09/Blog-header-jan-6th.jpg" >
+		<img id="showheader" src="/images/showheader.jpeg" >
 	</div>
 </div>
 
 <div id="article" class="container">
-	<div class="text-center">
+	<div id="look" class="text-center" style="padding-top: 5%;">
+
+		<h1><b><%= @recipes.name %></b><h1><br>
+
 		<img id="showimage" src="<%= @recipes.image_url %>" >
 	</div><br>
-	<div class="text-center">
-		<h3><%= @recipes.name %><h3><br>
+	<div id="text" class="text-center">
+		
 		<h5>Servings: </h5><h6><%= @recipes.servings %></h6>
 		<h5>Difficulty: </h5><h6><%= @recipes.difficulty %></h6>
-		<h5>Directions: </h5><h6><%= @recipes.directions %></h6>
 		
-		<h5>Ingredients: </h5><h6><%= @ingredients.name %></h6>
-	
+		<h5>Ingredients: </h5>
+		<% @ingredients.each do |t|  %>
+			 <h6><%= Ingredient.find(t.ingredient_id).name %></h6>
+		<% end %>
+	<div class="text">
+		<h5>Directions: </h5><h6><%= @recipes.directions %></h6>
+	</div>
 
 
 	</div>
 </div>
 
 <div id="article" class="container">
-	  <div class="text-center">
+	  <div id="text" class="text-center">
+	  	<%= link_to "Edit", edit_recipe_path %><br>
+	  	<%= link_to "Delete Recipe", recipe_path, method: :delete, data: {confirm: "Are you sure?"} %>
 		<p> <%= link_to "Go Back", recipes_path %> </p>
 	</div>
 </div>
+
