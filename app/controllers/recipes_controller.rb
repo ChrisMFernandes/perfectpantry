@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
 
 	def show
 		@recipes = Recipe.find(params[:id])
-		@ingredients = Ingredient.find(params[:id])
+		@ingredients = RecipeIngredient.where(recipe_id: params[:id])
 	end
 
 	def new
@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		@recipes = Recipe.new(name: params[:recipe][:name], directions: params[:recipe][:directions], difficulty: params[:recipe][:difficulty], servings: params[:recipe][:servings], image_url: params[:recipe][:image_url])
+		@recipes = Recipe.new(recipe_params)
 
   		respond_to do |format|
     		if @recipes.save
@@ -31,12 +31,12 @@ class RecipesController < ApplicationController
 	end
 
 	def edit
-		@recipes = Recipe.find(params[:id])
+		@recipes = Recipe.find_by(id: params[:id])
 	end
 
 	def update
 		@recipes = Recipe.find(params[:id])
-		@recipes.update(name: params[:recipe][:name], directions: params[:recipe][:directions], difficulty: params[:recipe][:difficulty], servings: params[:recipe][:servings], image_url: params[:recipe][:image_url])
+		@recipes.update(recipe_params)
 		redirect_to recipes_path
 	end
 
@@ -76,6 +76,6 @@ end
 private
 
 	def recipe_params
-		params.require(:recipe).permit(:name, :directions, :difficulty, :image_url)
+		params.require(:recipe).permit(:name, :directions, :difficulty, :image_url, :servings, ingredients_attributes: Ingredient.attribute_names.map(&:to_sym).push(:_destroy))
 	end
 

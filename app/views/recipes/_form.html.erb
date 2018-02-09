@@ -17,14 +17,19 @@
             		<%= f.text_area :directions, class: "form-control", :required => true %> 
           		</div>
                 
-
-                <%= f.fields_for :ingredients do |ff| %>
-              <div class="form-group">
-                <%= ff.text_field :name, class: "form-control", :required => true %>
+              <label>Ingredients:</label>
+              <div class="ingredients">
+                <div class="nested-fields form-inline">
+                  <%= f.fields_for :ingredients do |builder| %>
+                  <%= render "ingredient_fields", f: builder %>
+                  <% end %>
+              </div><br>
+              <div class="form-actions">
+                <%= link_to_add_association 'Add Ingredient', f, :ingredients, class: "btn btn-default", data: { association_insertion_node: ".ingredients", association_insertion_method: :append} %><br><br>
+                <%= submit_tag "Add", class: "btn btn-default" %>
               </div>
-              <% end %>
-		    <center><%= submit_tag "Add", class: "btn btn-default btn-primary" %></center>
 
 		</div>
 	<% end %>
+</div>
 </div>

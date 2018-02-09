@@ -18,7 +18,7 @@
 @import "bootstrap";
 
 footer{
-	color: #F23840;
+	color: #F7F7F7;
 	padding-top: 2%;
 	padding-bottom: 2%;
 }
@@ -27,9 +27,22 @@ nav{
 	padding: 1%;
 }
 
+#text{
+	font-family: 'Open Sans', sans-serif;
+}
+
+#look{
+
+	font-family: 'Josefin Slab', serif;
+}
+
+#bluebutton{
+	background-color: #171A2F;
+}
+
 .btn{
-	background-color: #F23840;
-	color: #171A2F;
+	background-color: #e83a30;
+	color: white;
 }
 
 .container{
@@ -39,12 +52,16 @@ nav{
 }
 
 .card-img-top{
-	height: 400px;
-	width: 600px;
+	height: 200px;
+	width: 300px;
 }
 
 .navbar-link{
 	color: #F23840;
+}
+
+.list-group-item{
+	background-color: #e4e4e4;
 }
 
 #cinema{
@@ -68,13 +85,13 @@ nav{
 }
 
 #article{
-	background-color: #f7f7f7;
+	background-color: #e4e4e4;
 	padding-left: 10%;
 	padding-right: 10%;
 }
 
 #blog{
-	background-color: #E0D6D0;
+	background-color: #e4e4e4;
 	padding-left: 4%;
 	padding-right: 4%;
 }
@@ -83,9 +100,9 @@ nav{
     position: absolute;
     top: 15%;
     left: 2%;
-    color: #E0D6D0;
+    color: #e4e4e4;
 }
 
-.card-columns {
-  column-count: 3;
-}
+// .card-columns {
+//   column-count: 1;
+// }
