@@ -54,7 +54,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # Use bootstrap for styling
-  gem 'bootstrap-sass', '~> 3.2.0'
+  gem 'bootstrap-sass'
   # Use autoprefixer to add proper vendor prefixes to CSS
   gem 'autoprefixer-rails'
   gem 'bootstrap_form'
