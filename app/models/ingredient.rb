@@ -1,5 +1,5 @@
 class Ingredient < ApplicationRecord
-	searchkick word_middle: [:name]
+	searchkick word_start: [:name]
 
 	def search_data
 		{
