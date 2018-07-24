@@ -211,7 +211,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap-sass (~> 3.2.0)
+  bootstrap-sass (= 3.2.0.2)
   bootstrap_form
   byebug
   capybara (~> 2.13)
