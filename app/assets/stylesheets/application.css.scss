@@ -20,6 +20,7 @@
 $primary-color: #e4e4e4;
 $secondary-color: #e83a30;
 $tertiary-color: #F7F7F7;
+$shadow: rgb(75, 75, 75);
 
 footer{
 	color: $tertiary-color;
@@ -71,6 +72,9 @@ nav{
 #cinema{
 	height: 450px;
 	width: 600px;
+	border-radius: 5px;
+	box-shadow: 10px 10px 20px $shadow;
+
 }
 
 #homeheader{
