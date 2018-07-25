@@ -48,6 +48,14 @@ nav{
 	border-radius: $border;
 }
 
+.form-control {
+	margin-top: 2px;
+}
+
+.input-group-btn {
+	padding-left: 2%;
+}
+
 .btn{
 	background-color: $secondary-color;
 	color: white;
@@ -58,6 +66,16 @@ nav{
 	padding-top: 2%;
 	padding-bottom: 2%;
 	min-width: 100%;
+}
+
+.card-deck {
+	// text-align: center;
+}
+
+.card {
+	text-align: center;
+	border: none !important;
+	background-color: $tertiary-color !important;
 }
 
 .card-img-top{
@@ -95,6 +113,8 @@ nav{
 #showimage{
 	width: 640px;
 	height: 500px;
+	border-radius: $border;
+	box-shadow: 10px 10px 20px $shadow;
 }
 
 #article{
