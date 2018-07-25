@@ -20,6 +20,7 @@ $primary-color: #e4e4e4;
 $secondary-color: #e83a30;
 $tertiary-color: #F7F7F7;
 $shadow: rgb(75, 75, 75);
+$border: 5px;
 
 footer{
 	color: $tertiary-color;
@@ -43,9 +44,14 @@ nav{
 	background-color: #171A2F;
 }
 
+#term {
+	border-radius: $border;
+}
+
 .btn{
 	background-color: $secondary-color;
 	color: white;
+	border-radius: $border !important;
 }
 
 .container{
@@ -57,6 +63,7 @@ nav{
 .card-img-top{
 	height: 200px;
 	width: 300px;
+	border-radius: $border !important;
 }
 
 .navbar-link{
