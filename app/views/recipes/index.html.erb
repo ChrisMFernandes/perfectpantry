@@ -1,7 +1,7 @@
 <div class="header">
 	<img id="homeheader" src="/images/indexheader.jpeg">
 </div>
-<div class="container" style="padding-left: 4%; padding-right: 2%; background-color: #e4e4e4;">
+<div class="container recipe">
 	<div class="jumbotron" style="background-color: #e4e4e4;">
 		<div id="look" class="text-center">
 			<h1>Check out this list of delicous recipes!</h1><br>
@@ -10,12 +10,12 @@
 
 	<div id="text" class="card-columns">
 		<% @recipes.each do |t| %>
-	  <div class="card" style="background-color: #e4e4e4; border: 0;">
-	    	<img class="card-img-top" style="height: 300px; width: 412px;" alt="Card image cap" src="<%= t.image_url %>">
+	  <div class="card secondary">
+			<h5 class="card-title"><b><%= t.name %></b></h5>
+	    	<img class="card-img-top recipes" alt="Card image cap" src="<%= t.image_url %>">
 	    		<div class="card-body">
-	      			<h5 class="card-title"><%= t.name %></h5>
 	    					<div id="text" class="text-center">
-	      						<%= link_to "View Recipe", recipe_path(t), method: :get%>
+	      						<%= button_to("View Recipe", recipe_path(t), method: :get, :class => "btn") %>
 	     					</div>
 	    		</div>
 	  </div>
@@ -28,7 +28,7 @@
 
 <div class="container" style="background-color: #e4e4e4;">
 	  <div id="text" class="text-center">
-		<p> <%= link_to "Add a new Recipe", new_recipe_path %> </p>
+		<p> <%= link_to "Add a new Recipe", new_recipe_path, :class => "btn" %> </p>
 	</div>
 </div>
 
