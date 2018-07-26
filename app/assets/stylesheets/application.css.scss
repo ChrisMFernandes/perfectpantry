@@ -68,20 +68,36 @@ nav{
 	min-width: 100%;
 }
 
-.card-deck {
-	// text-align: center;
+.container.recipe {
+	background-color: $primary-color;
 }
 
-.card {
+.card-columns {
+	width: 100%;
+	text-align: center;
+}
+
+.card.main{
 	text-align: center;
 	border: none !important;
 	background-color: $tertiary-color !important;
+}
+
+.card.secondary{
+	text-align: center;
+	border: none !important;
+	background-color: $primary-color !important;
 }
 
 .card-img-top{
 	height: 200px;
 	width: 300px;
 	border-radius: $border !important;
+}
+
+.card-img-top.recipes {
+	height: 300px;
+	width: 412px;
 }
 
 .navbar-link{
