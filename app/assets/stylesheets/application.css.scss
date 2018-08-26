@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-// @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 $primary-color: #e4e4e4;
@@ -98,6 +98,7 @@ nav{
 .card-img-top.recipes {
 	height: 300px;
 	width: 412px;
+	margin-bottom: 5px;
 }
 
 .navbar-link{
