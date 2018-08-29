@@ -60,5 +60,10 @@ group :development do
   gem 'bootstrap_form'
 end
 
+group :production do
+  gem 'bootstrap-sass', '3.2.0.2'
+  gem 'bootstrap_form'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
