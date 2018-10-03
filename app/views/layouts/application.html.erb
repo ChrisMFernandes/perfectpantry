@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Perfectpantry</title>
     <link rel="icon" type="image/png" href="/images/logo2.png">
 
@@ -15,27 +15,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
-  </head>
+</head>
 
-  <body>
-  	<div id="look" class="container">
-	  	<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #e4e4e4;">
-	  			<p class="navbar-text pull-left">
-					<% if user_signed_in? %>
-			  			Logged in as <strong><%= current_user.email %></strong>.
-			  			<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-			  			<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-					<% else %>
-			  			<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-			  			<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
-					<% end %>
-                        <%= link_to 'Recipes', recipes_path, :class => 'navbar-link' %>
+<body>
+    <div id="look" class="container">
+	    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #e4e4e4;">
+	        <p class="navbar-text pull-left">
+				<% if user_signed_in? %>
+			  		Logged in as <strong><%= current_user.email %></strong>.
+			  		<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+			  		<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+				<% else %>
+			  		<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+			  		<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
+				<% end %>
+                    <%= link_to 'Recipes', recipes_path, :class => 'navbar-link' %>
 				</p>
                <a class="navbar-brand text-center" href="/">
-                  <img src="/images/logo2.png" style="width:150px; margin-top: -50px; margin-left: 475px;">
+                  <img src="/images/logo2.png" style="width:150px; margin-top: -34%; margin-left: 338%;">
                </a>
 
-        <%= form_tag(search_recipes_path, method: :post, class: "form-inline my-2 my-lg-0 pull-right", role: "search") do %>
+        <%= form_tag(search_recipes_path, method: :get, class: "form-inline my-2 my-lg-0 pull-right") do %>
             <div class="input-group" style="padding-top: 3%;">
                     <%= text_field_tag :term, params[:term], placeholder: "Search Recipe", class: "form-control mr-sm-2" %>
                 <div class="input-group-btn search-panel">

@@ -124,11 +124,16 @@ nav{
 #showheader{
 	width: 100%;
 	height: 550px;
+	background-image: url("/images/showheader.jpeg");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 #showimage{
 	width: 640px;
 	height: 500px;
+	border: 2px solid black;
 	border-radius: $border;
 	box-shadow: 10px 10px 20px $shadow;
 }

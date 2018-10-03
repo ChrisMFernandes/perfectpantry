@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "knives", to: "home#knives"
   get "spices", to: "home#spices"
   get "steak", to: "home#steak"
-  post 'recipes/search' => 'recipes#search', as: 'search_recipes'
+  get 'recipes/search' => 'recipes#search'
 
   resources :recipes
   resources :ingredients
