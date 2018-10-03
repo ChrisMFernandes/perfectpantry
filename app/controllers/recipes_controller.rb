@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
 
 	def new
 		@recipes = Recipe.new
-		4.times { @recipes.ingredients.build }
+		6.times { @recipes.ingredients.build }
 	end
 
 	def create
@@ -47,7 +47,6 @@ class RecipesController < ApplicationController
 	end
 
 	def search
-		Recipe.reindex
 		search = params[:term].present? ? params[:term] : nil
 		@recipes = if search
 			Recipe.search(search, fields: [:name])
@@ -76,6 +75,6 @@ end
 private
 
 	def recipe_params
-		params.require(:recipe).permit(:name, :directions, :difficulty, :image_url, :servings, ingredients_attributes: Ingredient.attribute_names.map(&:to_sym).push(:_destroy))
+		params.require(:recipe).permit(:name, :directions, :difficulty, :image_url, :servings, :term, ingredients_attributes: Ingredient.attribute_names.map(&:to_sym).push(:_destroy))
 	end
 
