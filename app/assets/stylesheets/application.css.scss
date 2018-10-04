@@ -104,6 +104,19 @@ nav{
 	color: $secondary-color;
 }
 
+.navbar{
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar-text{
+	margin-left: -19%;
+}
+
+.search-form{
+	margin-right: -19%;
+}
+
 .list-group-item{
 	background-color: $primary-color;
 }
