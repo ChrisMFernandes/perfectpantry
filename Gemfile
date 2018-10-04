@@ -7,7 +7,6 @@ end
 
 gem 'cocoon'
 
-gem 'searchkick'
 # Install Devise for user authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
