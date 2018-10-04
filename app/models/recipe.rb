@@ -11,4 +11,13 @@ class Recipe < ApplicationRecord
 	has_many :ingredients
 	has_many :ingredients, through: :recipe_ingredients, :dependent => :destroy
 	accepts_nested_attributes_for :ingredients, allow_destroy: true
+
+
+	def self.search(term)
+		if term
+			where('name LIKE ?', "%#{term}%").order('id DESC')
+		else
+			order('id DESC')
+		end
+	end
 end

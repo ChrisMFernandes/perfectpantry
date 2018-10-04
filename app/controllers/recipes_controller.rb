@@ -47,12 +47,7 @@ class RecipesController < ApplicationController
 	end
 
 	def search
-		search = params[:term].present? ? params[:term] : nil
-		@recipes = if search
-			Recipe.search(search, fields: [:name])
-		else
-			Recipe.all
-		end
+		@recipes = Recipe.search(params[:term])
 	end
 
 end
