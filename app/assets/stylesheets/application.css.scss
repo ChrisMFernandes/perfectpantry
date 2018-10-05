@@ -210,6 +210,13 @@ nav{
 	background-size: cover;
 }
 
+.btn-container{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	padding-top: inherit;
+}
+
 #showimage{
 	width: 640px;
 	height: 500px;
