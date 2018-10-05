@@ -31,7 +31,7 @@
 				<% end %>
                     <%= link_to 'Recipes', recipes_path, :class => 'navbar-link' %>
 				</p>
-            <a class="navbar-brand text-center" href="#">
+            <a class="navbar-brand text-center" href="/">
                 <img src="/images/logo2.png" style="width:150px; margin-top: -34%; margin-left: 20%">
             </a>
 
@@ -45,16 +45,15 @@
 
         </nav>
 
-			
-            <% end %>
+			<% end %>
 
-	  	<% if notice %>
-	  		<p class="alert alert-success"><%= notice %></p>
-		<% end %>
-		<% if alert %>
-	  		<p class="alert alert-danger"><%= alert %></p>
+        <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
 
-		<% end %>
 	</div>
     <%= yield %>
     <footer class="page-footer" style="background-color: #e83a30; padding-left: 5%;">
