@@ -15,9 +15,9 @@ class Recipe < ApplicationRecord
 
 	def self.search(term)
 		if term
-			where('name LIKE ?', "%#{term}%").order('id DESC')
+			where('name LIKE ?', "%#{term}%").order('name DESC')
 		else
-			order('id DESC')
+			order('name DESC')
 		end
 	end
 end
