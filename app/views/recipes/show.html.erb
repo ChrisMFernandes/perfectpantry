@@ -17,7 +17,7 @@
 		
 		<h5>Ingredients: </h5>
 		<% @ingredients.each do |t|  %>
-			 <h6><%= Ingredient.find(t.ingredient_id).name %></h6>
+			<h6><%= Ingredient.find(t.ingredient_id).name %></h6>
 		<% end %>
 	<div class="text">
 		<h5>Directions: </h5><h6><%= @recipes.directions %></h6>
