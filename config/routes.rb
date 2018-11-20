@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-        sessions: 'users/sessions'
+        sessions: "users/sessions"
       }
   
-  root to: "home#index"
+  root :to => "home#index"
 
-  get "knives", to: "home#knives"
-  get "spices", to: "home#spices"
-  get "steak", to: "home#steak"
-  get 'recipes/search' => 'recipes#search'
+  get "knives" => "home#knives"
+  get "spices" => "home#spices"
+  get "steak" => "home#steak"
+  get "recipes/search" => "recipes#search"
 
   resources :recipes
   resources :ingredients

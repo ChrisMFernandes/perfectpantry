@@ -25,7 +25,6 @@ class RecipesController < ApplicationController
     		else
       			format.html { render :new }
       			format.json { render json: @recipes.errors, status: :unprocessable_entity }
-      			format.js
     		end
   		end
 	end

@@ -7,6 +7,8 @@ end
 
 gem "rack", ">= 2.0.6"
 
+gem 'bootstrap-sass', '3.2.0.2'
+gem 'bootstrap_form'
 # Install Devise for user authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -52,16 +54,13 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  # Use bootstrap for styling
-  gem 'bootstrap-sass', '3.2.0.2'
   # Use autoprefixer to add proper vendor prefixes to CSS
   gem 'autoprefixer-rails'
-  gem 'bootstrap_form'
+
 end
 
 group :production do
-  gem 'bootstrap-sass', '3.2.0.2'
-  gem 'bootstrap_form'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
