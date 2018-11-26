@@ -13,8 +13,8 @@
 			<h5 class="card-title"><b><%= t.name %></b></h5>
 	    	<img class="card-img-top recipes" alt="Card image cap" src="<%= t.image_url %>">
 	    		<div class="card-body">
-	    					<div id="text" class="text-center">
-	      						<%= button_to("View Recipe", recipe_path(t), method: :get, :class => "btn") %>
+	    					<div id="text">
+	      						<%= button_to("View Recipe", recipe_path(t), method: :get, :class => "btn") %><br>
 								</div>
 	    		</div>
 	  </div>

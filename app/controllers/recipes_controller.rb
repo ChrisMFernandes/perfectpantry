@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
 	end
 
 	def show
-		@recipes = Recipe.find(params[:id])
+		@recipe = Recipe.find(params[:id])
 		@ingredients = RecipeIngredient.where(recipe_id: params[:id])
 	end
 
@@ -41,8 +41,8 @@ class RecipesController < ApplicationController
 	end
 
 	def destroy
-		@recipes = Recipe.find(params[:id])
-		@recipes.destroy
+		@recipe = Recipe.find(params[:id])
+		@recipe.destroy
 		redirect_to recipes_path
 	end
 
