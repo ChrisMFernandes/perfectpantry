@@ -1,24 +1,12 @@
-# README
+# PerfectPantry
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was built as a final project for NYCDA's WDI program. The purpose of this application is to allow users to store and search their favorite recipes. 
 
-Things you may want to cover:
+# Built With
+..* Ruby on Rails
+..* Bootstrap
+..* PostgreSQL
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Coming Soon
+..* User authentication with Devise
+..* Add recipes to favorites
