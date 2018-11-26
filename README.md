@@ -8,6 +8,10 @@ This application was built as a final project for NYCDA's WDI program. The purpo
 * Bootstrap
 * PostgreSQL
 
+![alt text](https://github.com/ChrisMFernandes/perfectpantry/blob/master/public/images/screenshot1.png "Landing page top")
+![alt text](https://github.com/ChrisMFernandes/perfectpantry/blob/master/public/images/screenshot2.png "Landing page mid")
+![alt text](https://github.com/ChrisMFernandes/perfectpantry/blob/master/public/images/screenshot3.png "Landing page bottom")
+
 # Coming Soon
 
 * User authentication with Devise
