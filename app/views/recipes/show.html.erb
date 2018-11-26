@@ -1,37 +1,33 @@
 <div class="header">
-	<div class="showheader">
-	</div>
+	<div class="showheader"></div>
 </div>
 
 <div id="article" class="container">
 	<div id="look" class="text-center" style="padding-top: 5%;">
-
-		<h1><b><%= @recipes.name %></b><h1><br>
-
-		<img id="showimage" src="<%= @recipes.image_url %>" >
+		<h1><b><%= @recipe.name %></b><h1><br>
+		<img id="showimage" src="<%= @recipe.image_url %>" >
 	</div><br>
+	
 	<div id="text" class="text-center">
-		
-		<h5>Servings: </h5><h6><%= @recipes.servings %></h6>
-		<h5>Difficulty: </h5><h6><%= @recipes.difficulty %></h6>
-		
+		<h5>Servings: </h5><h6><%= @recipe.servings %></h6>
+		<h5>Difficulty: </h5><h6><%= @recipe.difficulty %></h6>
 		<h5>Ingredients: </h5>
+		
 		<% @ingredients.each do |t|  %>
 			<h6><%= Ingredient.find(t.ingredient_id).name %></h6>
 		<% end %>
-	<div class="text">
-		<h5>Directions: </h5><h6><%= @recipes.directions %></h6>
-	</div>
-
-
+	
+		<div class="text">
+			<h5>Directions: </h5><h6><%= @recipe.directions %></h6>
+		</div>
 	</div>
 </div>
 
 <div id="article" class="container">
-	  <div id="text" class="text-center">
-	  	<%= link_to "Edit", edit_recipe_path %><br>
-	  	<%= link_to "Delete Recipe", recipe_path, method: :delete, data: {confirm: "Are you sure?"} %>
-		<p> <%= link_to "Go Back", recipes_path %> </p>
+	<div id="text" class="text-center">
+		<%= link_to "Edit", edit_recipe_path %><br>
+		<%= link_to "Delete Recipe", @recipe, method: :delete, data: {confirm: "Are you sure?"} %><br>
+		<%= link_to "Go Back", recipes_path %>
 	</div>
 </div>
 
