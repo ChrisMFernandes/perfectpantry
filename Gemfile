@@ -8,6 +8,8 @@ end
 gem 'rack', '>= 2.0.6'
 
 gem 'searchkick'
+gem 'jquery-rails'
+gem 'cocoon'
 
 # Install Devise for user authentication
 gem 'devise'
