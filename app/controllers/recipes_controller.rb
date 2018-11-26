@@ -47,10 +47,7 @@ class RecipesController < ApplicationController
 	end
 
 	def search
-		@recipes = Recipe.search(params[:term])
-		puts '==='
-		puts @recipes
-		puts '==='
+		@recipes = Recipe.search(params[:term].capitalize)
 	end
 
 end

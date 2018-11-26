@@ -5,7 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "rack", ">= 2.0.6"
+gem 'rack', '>= 2.0.6'
+
+gem 'searchkick'
 
 # Install Devise for user authentication
 gem 'devise'
