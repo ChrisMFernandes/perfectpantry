@@ -217,6 +217,11 @@ nav{
 	padding-top: inherit;
 }
 
+.show-buttons{
+	display: flex;
+	justify-content: space-evenly;
+}
+
 #showimage{
 	width: 640px;
 	height: 500px;

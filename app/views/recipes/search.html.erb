@@ -1,5 +1,5 @@
-<div class="searchheader">
-</div>
+<div class="searchheader"></div>
+
 <div class="container" style="background-color: #e4e4e4;">
 	<div class="jumbotron" style="background-color: #e4e4e4;">
 		<div id="look" class="text-center">
@@ -7,7 +7,7 @@
 		</div>
 	</div>
 
-			<div class="card-deck-wrapper" style="padding-left: 6%;">
+			<div class="card-deck-wrapper text-center">
 				<div id="text" class="card-deck">
 					<% @recipes.each do |t| %>
 				  <div class="card" style="background-color: #e4e4e4; border: 0;">
@@ -15,14 +15,13 @@
 				    <div class="card-body">
 				      <h5 class="card-title"><%= t.name %></h5>
 				      <p class="card-text"><%= t.name %></p>
-				    <div class="text-center">
-				      <%= link_to "View Recipe", recipe_path(t), method: :get %>
-				    </div>
+				    	<div class="text-center">
+				      	<%= link_to "View Recipe", recipe_path(t), method: :get, class: "btn" %>
+				    	</div>
 				    </div>
 				  </div>
 					<% end %>
 				</div>
 			</div>
-
 </div>
 
