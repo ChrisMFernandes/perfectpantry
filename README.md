@@ -15,6 +15,10 @@ This application was built as a final project for NYCDA's WDI program. The purpo
 ![alt text](https://github.com/ChrisMFernandes/perfectpantry/blob/master/public/images/screenshot3.png "Landing page bottom")
 ---
 
+# Deployment
+
+[Check out the application on Heroku!](https://perfectpantry.herokuapp.com/)
+
 # Coming Soon
 
 * User authentication with Devise
