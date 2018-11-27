@@ -24,10 +24,10 @@
 </div>
 
 <div id="article" class="container">
-	<div id="text" class="text-center">
-		<%= link_to "Edit", edit_recipe_path %><br>
-		<%= link_to "Delete Recipe", @recipe, method: :delete, data: {confirm: "Are you sure?"} %><br>
-		<%= link_to "Go Back", recipes_path %>
+	<div id="text" class="show-buttons">
+		<%= link_to "Edit", edit_recipe_path, class: 'btn' %><br>
+		<%= link_to "Delete Recipe", @recipe, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn' %><br>
+		<%= link_to "Go Back", recipes_path, class: 'btn' %>
 	</div>
 </div>
 
