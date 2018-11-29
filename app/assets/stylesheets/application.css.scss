@@ -147,7 +147,7 @@ nav{
 
 .showheader{
 	width: 100%;
-	min-height: 550px;
+	height: 80vh;
 	background-image: url("/images/showheader.jpeg");
 	background-position: center;
 	background-attachment: fixed;
@@ -156,16 +156,16 @@ nav{
 
 .newheader{
 	width: 100%;
-	min-height: 550px;
-	background-position: 15% 75%;
-	background-image: url("/images/newheader.jpg");
+	height: 80vh;
+	background-position: center;
+	background-image: url("/images/newheader1.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
 
 .knifeheader{
 	width: 100%;
-	min-height: 550px;
+	height: 80vh;
 	background-image: url("http://www.caterdeal.co.uk/wp-content/uploads/kitchenware-cat-header.jpg");
 	background-position: center;
 	background-attachment: fixed;
@@ -174,7 +174,7 @@ nav{
 
 .spiceheader{
 	width: 100%;
-	min-height: 550px;
+	height: 80vh;
 	background-image: url("/images/spiceheader.jpeg");
 	background-position: center;
 	background-attachment: fixed;
@@ -183,7 +183,7 @@ nav{
 
 .steakheader{
 	width: 100%;
-	min-height: 550px;
+	height: 80vh;
 	background-image: url("/images/steak.jpg");
 	background-position: center;
 	background-attachment: fixed;
@@ -192,7 +192,7 @@ nav{
 
 .recipeheader{
 	width: 100%;
-	min-height: 550px;
+	height: 80vh;
 	background-image: url("/images/indexheader.jpeg");
 	background-position: center;
 	background-attachment: fixed;
@@ -201,8 +201,8 @@ nav{
 
 .editheader{
 	width: 100%;
-	min-height: 550px;
-	background-image: url("/images/header.jpg");
+	height: 80vh;
+	background-image: url("/images/editheader.jpeg");
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
@@ -210,7 +210,7 @@ nav{
 
 .searchheader{
 	width: 100%;
-	min-height: 550px;
+	height: 80vh;
 	background-image: url("/images/searchheader.jpg");
 	background-position: center;
 	background-attachment: fixed;
@@ -219,7 +219,7 @@ nav{
 
 .deviseheader{
 	width: 100%;
-	min-height: 550px;
+	height: 80vh;
 	background-image: url("http://www.fudart.co.za/images/background_header.jpg");
 	background-position: center;
 	background-attachment: fixed;
