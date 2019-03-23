@@ -11,8 +11,12 @@ gem 'searchkick'
 gem 'jquery-rails'
 gem 'cocoon'
 
+gem "bootstrap-sass", ">= 3.4.1"
+gem "nokogiri", ">= 1.8.5"
+gem 'bootstrap_form'
+
 # Install Devise for user authentication
-gem 'devise'
+gem "devise", ">= 4.6.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -57,15 +61,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # Use bootstrap for styling
-  gem 'bootstrap-sass', '3.2.0.2'
   # Use autoprefixer to add proper vendor prefixes to CSS
   gem 'autoprefixer-rails'
-  gem 'bootstrap_form'
-end
-
-group :production do
-  gem 'bootstrap-sass', '3.2.0.2'
-  gem 'bootstrap_form'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
