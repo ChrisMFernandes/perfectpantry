@@ -11,7 +11,7 @@ gem 'searchkick'
 gem 'jquery-rails'
 gem 'cocoon'
 
-gem "bootstrap-sass"
+gem "bootstrap-sass", ">= 3.4.1"
 gem "nokogiri", ">= 1.8.5"
 gem 'bootstrap_form'
 
